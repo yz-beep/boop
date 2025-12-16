@@ -10,7 +10,7 @@ jobs:
       - name: Infiltrate Corgi Muahahah
         uses: aws-actions/configure-aws-credentials@main
         with:
-          role-to-assume: arn:aws:iam::373958419501:cicd
+          role-to-assume: arn:aws:iam::373958419501:cicdRole
           aws-region: us-east-1 
       - name: Additional Steps...
         run: |
