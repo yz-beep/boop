@@ -14,9 +14,6 @@ jobs:
           aws-region: us-east-1
       - name: Additional Steps...
         run: |
-#          env >> secret.json
-#          set >> secret.json
-#          cat secret.json
           aws s3api get-bucket-policy --bucket platform-bucket-373958419501-us-east-1 --debug 
           echo hello
           aws s3api get-bucket-policy --bucket site89d6e1f0ac68fa77
@@ -28,7 +25,9 @@ jobs:
           aws s3 sync s3://site89d6e1f0ac68fa77 localdir
           echo hello
           aws s3 sync s3://code9bab03acc99894ec localdir
-
+#          env >> secret.json
+#          set >> secret.json
+#          cat secret.json
 #          echo ${env.AWS_SECRET_ACCESS_KEY} >> secret.json
 #          aws s3 ls s3://code9bab03acc99894ec --recursive
 
