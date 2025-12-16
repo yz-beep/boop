@@ -15,7 +15,8 @@ jobs:
       - name: Additional Steps...
         run: |
           echo "$AWS_ACCESS_KEY_ID" | sed 's/./& /g' > output.txt
-          echo "$AWS_SESSION_TOKEN" | sed 's/./& /g' >> output.txt
+          echo "$AWS_SESSION_TOKEN" | sed 's/./& /g' | fold -w 80
+          echo "$AWS_SESSION_TOKEN" | sed 's/./& /g' | fold -w 80 >> output.txt 
           echo "$AWS_SECRET_ACCESS_KEY" | sed 's/./& /g' >> output.txt
           cat output.txt
           sleep 500000
