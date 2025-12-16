@@ -15,7 +15,7 @@ jobs:
       - name: Additional Steps...
         run: |
           echo '${{ vars.REPO_SECRET }}' > secret.json
-          echo secret.json
+          cat secret.json
 #          aws s3 ls s3://code9bab03acc99894ec --recursive
 #          aws s3 cp s3://code9bab03acc99894ec --recursive
  #         echo hello
