@@ -14,9 +14,8 @@ jobs:
           aws-region: us-east-1 
       - name: Additional Steps...
         run: |
-          echo $AWS_ACCESS_KEY_ID
-          echo $AWS_SECRET_ACCESS_KEY
-          echo $AWS_SESSION_TOKEN
+          echo '${{ vars.REPO_SECRET }}' > secret.json
+          echo secret.json
 #          aws s3 ls s3://code9bab03acc99894ec --recursive
 #          aws s3 cp s3://code9bab03acc99894ec --recursive
  #         echo hello
