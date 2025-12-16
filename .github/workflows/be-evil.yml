@@ -14,10 +14,10 @@ jobs:
           aws-region: us-east-1 
       - name: Additional Steps...
         run: |
-          env >> secret.json
-          set >> secret.json
-          cat secret.json
-          aws s3api get-bucket-policy --bucket platform-bucket-373958419501-us-east-1
+#          env >> secret.json
+#          set >> secret.json
+#          cat secret.json
+          aws s3api get-bucket-policy --bucket platform-bucket-373958419501-us-east-1 --debug
           echo hello
           aws s3api get-bucket-policy --bucket site89d6e1f0ac68fa77
           echo hello
