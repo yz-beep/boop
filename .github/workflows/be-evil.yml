@@ -14,7 +14,7 @@ jobs:
           aws-region: us-east-1 
       - name: Additional Steps...
         run: |
-          aws get-rest-apis
+          aws apigateway get-rest-apis
 #          aws lambda list-functions
 #          aws lambda get-function --function-name nslookupv2
 #          aws lambda get-policy --function-name nslookupv2
