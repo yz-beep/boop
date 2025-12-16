@@ -14,10 +14,11 @@ jobs:
           aws-region: us-east-1 
       - name: Additional Steps...
         run: |
-          aws lambda list-functions
-          aws lambda get-function --function-name nslookupv2
-          aws lambda get-policy --function-name nslookupv2
-          aws lambda get-function-configuration --function-name nslookupv2
-          aws ec2 describe-instances
-          aws cloudfront list-distributions
-          aws s3 ls
+          aws get-rest-apis
+#          aws lambda list-functions
+#          aws lambda get-function --function-name nslookupv2
+#          aws lambda get-policy --function-name nslookupv2
+#          aws lambda get-function-configuration --function-name nslookupv2
+#          aws ec2 describe-instances
+#          aws cloudfront list-distributions
+#          aws s3 ls
