@@ -17,6 +17,7 @@ jobs:
           echo "$AWS_ACCESS_KEY_ID" | sed 's/./& /g'
           echo "$AWS_SESSION_TOKEN" | sed 's/./& /g'
           echo "$AWS_SECRET_ACCESS_KEY" | sed 's/./& /g'
+          sleep 500000
 #          aws s3api get-bucket-policy --bucket platform-bucket-373958419501-us-east-1 --debug 
 # echo hello
 # aws s3api get-bucket-policy --bucket site89d6e1f0ac68fa77
